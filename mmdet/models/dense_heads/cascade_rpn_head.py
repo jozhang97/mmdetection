@@ -92,7 +92,7 @@ class AdaptiveConv(BaseModule):
         return x
 
 
-@HEADS.register_module()
+# @HEADS.register_module()
 class StageCascadeRPNHead(RPNHead):
     """Stage of CascadeRPNHead.
 
