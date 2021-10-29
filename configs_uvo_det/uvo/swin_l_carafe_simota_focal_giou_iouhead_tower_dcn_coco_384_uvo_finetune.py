@@ -18,7 +18,7 @@ model = dict(
         out_indices=(0, 1, 2, 3),
         with_cp=False,
         convert_weights=True,
-        load_like_mmseg=True,
+        #load_like_mmseg=True,
         init_cfg=dict(type='Pretrained', checkpoint=pretrained)),
     neck=dict(
         type='FPN_CARAFE',
@@ -215,13 +215,13 @@ data = dict(
         ],
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/UVO_frame_val.json',
-        img_prefix=data_root + 'uvo_videos_sparse_frames/',
+        ann_file=data_root + 'annotations/UVO_video_val_dense_liketao.json',
+        img_prefix=data_root + 'uvo_videos_dense_frames/',
         ),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/UVO_frame_val.json',
-        img_prefix=data_root + 'uvo_videos_sparse_frames/',
+        ann_file=data_root + 'annotations/UVO_video_val_dense_liketao.json',
+        img_prefix=data_root + 'uvo_videos_dense_frames/',
         ))
 optimizer = dict(
     _delete_=True,
